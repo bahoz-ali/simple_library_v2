@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --clr-primary: #fdfdfd;
+  --clr-secondary: #45ae9e;
+  --clr-last: #fa784a;
+}
+
+/* ----- header ----- */
+body {
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: poppins, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-primary);
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+#nav {
+  color: var(--clr-primary);
+  display: flex;
+  background-color: var(--clr-last);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+.v-line {
+  flex: 0 0 2px;
+  min-height: 2rem;
+  min-width: 2px;
+  background-color: var(--clr-primary);
+}
+
+.nav_list {
+  padding: 0.4rem 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.nav_list .item a {
+  border-radius: 5px;
+  padding: 0.3rem 0.8rem;
+  transition: all 0.4s ease-in;
+}
+
+.nav_list .item a:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-last);
+  cursor: pointer;
+}
+
+/* ----- time section ----- */
+
+.time_section p {
+  text-align: right;
+  color: #646464;
+  margin: 0.2rem 1rem 0 0;
+}
+
+/* Books section */
+
+.showing_books {
+  display: none;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 0.8rem 0.8rem 0 0;
+  padding: 1rem 2rem;
+  background-color: var(--clr-secondary);
+}
+
+.fa-trash {
+  color: var(--clr-last);
+  font-size: 1.1rem;
+}
+
+.book {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  background-color: var(--clr-primary);
+}
+
+.book:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+/* ----- book section ----- */
+.wrapper {
+  width: 100%;
+  padding-top: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.book_section {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.book_section > h1 {
+  color: var(--clr-secondary);
+  font-size: 2.2rem;
+}
+
+form {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+form .form_input {
+  margin-bottom: 0.8rem;
+}
+
+.form_input input {
+  padding: 0.2rem 0.3rem;
+}
+
+.btn {
+  padding: 0.4rem 0.9rem;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.btn--secondary {
+  color: #fff;
+  background-color: brown;
+}
+
+.btn--primary {
+  color: #fff;
+  background: rgb(17, 111, 17);
+}
+
+/* ----- contact section ----- */
+
+.contact_section {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.contact_section > h1 {
+  font-size: 2.2rem;
+  color: var(--clr-secondary);
+}
+
+.contact {
+  margin-top: 2rem;
+}
+
+.contact > p {
+  font-size: 1.2rem;
+}
+
+.contact__list {
+  color: rgb(56, 56, 56);
+  margin-top: 1rem;
+  text-align: start;
+  list-style-type: disc;
+}
+
+/* ----- footer ----- */
+
+footer {
+  padding: 1.5rem 2rem;
+  color: white;
+  background-color: rgb(24, 22, 22);
+  margin-top: auto;
+}

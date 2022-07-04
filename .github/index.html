@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Books</title>
+
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <!-- reset css -->
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <!-- css file -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="nav">
+        <h3>Awesome book</h3>
+        <ul class="nav_list">
+          <li class="item"><a id="home_link" href="#">List</a></li>
+          <li class="v-line"></li>
+          <li class="item"><a id="add_book_link" href="#">Add Book</a></li>
+          <li class="v-line"></li>
+          <li class="item"><a id="contact_link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Time section -->
+    <section class="time_section">
+      <p>March 19th 2022, 10:30:02 PM</p>
+    </section>
+
+    <div class="wrapper">
+      <!-- showing books section  -->
+      <section class="showing_books">
+        <div class="book_list"></div>
+      </section>
+
+      <!-- book section -->
+      <section class="book_section">
+        <h1>Add a new book</h1>
+
+        <form action="#">
+          <div class="form_input">
+            <input type="text" placeholder="Title" id="title_input" />
+          </div>
+
+          <div class="form_input">
+            <input type="text" placeholder="Author" id="author_input" />
+          </div>
+
+          <button id="add_book" class="btn btn--primary" type="submit">
+            Add
+          </button>
+        </form>
+      </section>
+
+      <!-- contact section -->
+      <section class="contact_section">
+        <h1>Contact Information</h1>
+
+        <div class="contact">
+          <p>
+            Do have any Question or you want to say "Hello"?<br />You can reach
+            out to us!
+          </p>
+
+          <ul class="contact__list">
+            <li class="item">Our e-mail: awesomebooksstore@gmail.com</li>
+            <li class="item">Our Phone Number: +260987654321</li>
+            <li class="item">Our Address: PO BOX 93623 Microverse str.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!-- footer section -->
+    <footer>&copy; Copyright 2022 <span>AWESOME BOOKS</span></footer>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
