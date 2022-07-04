@@ -1,9 +1,12 @@
 /* eslint-disable max-classes-per-file */
-const titleInput = document.querySelector('#title_input');
-const authorInput = document.querySelector('#author_input');
-const bookList = document.querySelector('.book_list');
-const addBookButton = document.querySelector('#add_book');
-const form = document.querySelector('.book_section form');
+
+import {
+  addBookButton,
+  authorInput,
+  bookList,
+  form,
+  titleInput,
+} from '../modules/elements.js';
 
 // sections
 const showingBooksSection = document.querySelector('.showing_books');
@@ -96,8 +99,8 @@ class Library {
     // clean the book list before.
     bookList.innerHTML = '';
 
-    if(this.books.length === 0) {
-      hide(showingBooksSection)
+    if (this.books.length === 0) {
+      hide(showingBooksSection);
     }
 
     if (this.books || this.books.length !== 0) {
