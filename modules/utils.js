@@ -1,7 +1,7 @@
-export function show(name, display = 'block') {
+export const show = (name, display = 'block') => {
   name.style.display = display;
-}
+};
 
-export function hide(name) {
+export const hide = (name) => {
   name.style.display = 'none';
-}
+};
