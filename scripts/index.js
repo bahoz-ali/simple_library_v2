@@ -2,8 +2,6 @@
 import Library from '../modules/Library.js';
 import { show, hide } from '../modules/utils.js';
 import { DateTime } from '../node_modules/luxon/src/luxon.js';
-const dt = DateTime.now();
-
 import {
   addBookButton,
   showingBooksSection,
@@ -15,6 +13,8 @@ import {
   footerTime,
   time,
 } from '../modules/elements.js';
+
+const dt = DateTime.now();
 
 export const library = new Library();
 
@@ -45,8 +45,8 @@ addBookLink.addEventListener('click', showBookForm);
 contactLink.addEventListener('click', showContact);
 
 addBookButton.addEventListener('click', library.addBook);
-document.addEventListener('click', function (e) {
-  if (e.target && e.target.id == 'delete_book') {
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'delete_book') {
     library.deleteBook(Number(e.target.dataset.id));
   }
 });
