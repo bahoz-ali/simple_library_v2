@@ -37,7 +37,6 @@ export default class Library {
 
   // eslint-disable-next-line
   deleteBook = (id) => {
-    
     if (this.books) {
       this.books = this.books.filter((b) => b.id !== id);
 
@@ -54,26 +53,24 @@ export default class Library {
     }
   };
 
-  createLocalStorage() {
+  createLocalStorage = () => {
     if (!localStorage.getItem('books')) {
       localStorage.setItem('books', JSON.stringify([]));
     } else {
       this.books = this.getBooks();
     }
-  }
+  };
 
-  updateStorage() {
+  updateStorage = () => {
     localStorage.setItem('books', JSON.stringify(this.books));
-  }
+  };
 
   templateBook = (obj) => {
     const div = document.createElement('div');
     div.classList.add('book');
 
     const insideBook = `
-     <p><i class="fa-solid fa-address-book"></i> <span style="margin-left: 0.2rem;">${
-       obj.title
-     }</span> - <span>${obj.authorName}</span></p>
+     <p><i class="fa-solid fa-address-book"></i> <span style="margin-left: 0.2rem;">${obj.title}</span> - <span>${obj.authorName}</span></p>
              <button class="btn" style="padding:0;"  type="submit" ><i id="delete_book" data-id='${obj.id}' class="fa-solid fa-trash"></i></button>`;
 
     div.innerHTML = insideBook;
@@ -81,7 +78,7 @@ export default class Library {
     bookList.append(div);
   };
 
-  displayBooks() {
+  displayBooks = () => {
     // clean the book list before.
     bookList.innerHTML = '';
 
@@ -94,5 +91,5 @@ export default class Library {
         this.templateBook(book);
       });
     }
-  }
+  };
 }
