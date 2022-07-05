@@ -1,5 +1,5 @@
-import { library } from '../scripts/index.js';
 import Book from './book.js';
+import { hide } from './utils.js';
 import {
   titleInput,
   authorInput,
@@ -7,7 +7,6 @@ import {
   form,
   showingBooksSection,
 } from './elements.js';
-import { hide } from './utils.js';
 
 export default class Library {
   books = [];

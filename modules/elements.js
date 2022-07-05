@@ -3,6 +3,8 @@ export const authorInput = document.querySelector('#author_input');
 export const bookList = document.querySelector('.book_list');
 export const addBookButton = document.querySelector('#add_book');
 export const form = document.querySelector('.book_section form');
+export const footerTime = document.querySelector("#footer_time")
+export const time = document.querySelector("#time")
 
 // sections
 export const showingBooksSection = document.querySelector('.showing_books');

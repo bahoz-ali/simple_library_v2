@@ -2,6 +2,7 @@
 import Library from '../modules/Library.js';
 import { show, hide } from '../modules/utils.js';
 import { DateTime } from '../node_modules/luxon/src/luxon.js';
+const dt = DateTime.now();
 
 import {
   addBookButton,
@@ -11,6 +12,8 @@ import {
   homeLink,
   contactSection,
   newBookSection,
+  footerTime,
+  time,
 } from '../modules/elements.js';
 
 export const library = new Library();
@@ -55,4 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (library.books.length) {
     show(showingBooksSection);
   }
+
+  footerTime.innerHTML = dt.year;
 });
+
+// update the time every second.
+setInterval(() => {
+  const now = DateTime.now();
+  const currentTime = now.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
+  time.innerHTML = currentTime;
+}, 1000);
